@@ -14,7 +14,7 @@ const append = (message, position) => {
 
 }
 
-const name = prompt("Enter your name to join constsChat")
+const name = prompt("Enter your name to join Live chat")
 
 socket.emit('new-user-joined', name)
 
