@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { URL } from "../utils/apiUrl";
 
 const useGetConversations = () => {
 	const [loading, setLoading] = useState(false);
@@ -11,7 +10,7 @@ const useGetConversations = () => {
 			setLoading(true);
 			console.log(URL);
 			try {
-				const res = await fetch("/api/users");
+				const res = await fetch("https://live-chat-6msa.onrender.com/api/users");
 				const data = await res.json();
 				if (data.error) {
 					throw new Error(data.error);
